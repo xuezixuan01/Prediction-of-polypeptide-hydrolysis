@@ -5,6 +5,8 @@ Replace ‘testnode’ and ‘testbond’ list in the main.py which include amin
 
 The principle of this program is to treat the amino acid monomer as a node of a graph, and the bond between amino acids as an edge of the graph. In this way, the problem of predicting all hydrolyzed fragments of a polypeptide is equivalent to the problem of enumerating all the subgraphs of the above graph. In addition, the algorithm used in this program is optimized by the characteristics of peptides. Since there are usually many chain structures in a polypeptide, each single chain is treated as a supernode. First, we enumerate all the subgraphs of the graph composed of supernodes. Then, we find the supernodes connected to these subgraphs which will be treated as incomplete chains. The final result is obtained by sequentially chopping the bonds on these single chains and merging them with the subgraph. This method improves the performance of the program by avoiding the need to store all graph structures in memory.
 
+![images](https://github.com/xuezixuan01/Prediction-of-polypeptide-hydrolysis/commit/d43a2a44259a878a493a9a96892f469f4d5dde6c)
+
 There is currently no license for this program. You can use it for calculations, but cannot disseminate it in any way or use it for commercial services. If you have any need, please contact me by sending email to xuezixuan01@gmail.com 
 
 The C++ version of this program optimizes the algorithm of exhaustive subgraphs and some data structures, which makes it faster and supports the generation of tens of millions of fragments. However, its ownership belongs to Che-Hung Micro Technology (Shanghai) Co., Ltd.(hzwtech)
